@@ -32,6 +32,10 @@ if not foundNumber:
     print('Could not find any phone numbers.')
 
 
-phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # so much better to use regex
 mo = phoneNumRegex.search(message)
 print(mo.group())
+
+batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+mo2 = batRegex.search('Batman sat in the Batmobile looking up at the bats flying aroung the Batcopter')
+print(mo2.group())
